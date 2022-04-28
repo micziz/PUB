@@ -60,17 +60,25 @@ def help():
         "Check leap year",
         "Password generator"
     }
-    for i in available: print(i)
     info = """
 PUB Copyright (c) 2021-present micziz
 PUB is free software: \nyou can redistribute it and/or modify under the terms of the BSD 2-Clause "SIMPLEFIED" License.
-PUB is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+PUB is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; \nwithout even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 More iformation about the license can be found in the COPYING file.
-
-
-    
+Contribute to the project by visiting:\nhttps://github.com/micziz/PUB
+If you have any questions/issues, please contact me at: \nmiczicontent@gmail.com\nor by opening an issue on GitHub.
+Thank you for using PUB!
     """
-    input("Press enter to continue...")
+    selectHelp = input("Enter available to learn about available commands, or info for some general info: ")
+    if selectHelp == "available":
+        for i in available: print(i)
+        input("Press enter to continue...")
+    elif selectHelp == "info":
+        print(info)
+        input("Press enter to continue...")
+    else:
+        print("Invalid input")
+        time.sleep(1)
 
 while True:
     os.system(clear_command)
@@ -84,3 +92,10 @@ while True:
         passwordGenerator()
     elif pubChoose == "help":
         help()
+    elif pubChoose == "exit":
+        print("Exiting...")
+        time.sleep(1)
+        break
+    else:
+        print("Invalid input")
+        time.sleep(1)
