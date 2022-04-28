@@ -18,24 +18,6 @@ else:
 print("Loading...")
 time.sleep(2)
 
-def guessTheNumber():
-    os.system(clear_command)
-    print(f.renderText('GUESS THE NUMBER'))
-    def generateNumber(n):
-        return random.randint(1, n)
-    generatedNumber = generateNumber(10)
-    tries = 3
-    while tries > 0:
-        guess = int(input("Guess the number: "))
-        if guess == generatedNumber:
-            print(f"You guessed it in {tries} Tries!")
-            break
-        elif guess > generatedNumber:
-            print("Too high!")
-            tries -= 1
-        elif guess < generatedNumber:
-            print("Too low!")
-            tries -= 1
     
 def countdown():
     os.system(clear_command)
@@ -70,13 +52,19 @@ def checkLeapYear():
     else:
         print("{0} is not a leap year!!".format(year))
 
+def help():
+    os.system(clear_command)
+    print(f.renderText('HELP'))
+    available = {
+        "Guess The Number",
+        ""
+    }
+
 while True:
     os.system(clear_command)
     print(f.renderText('MAIN MENU'))
     pubChoose = input("Hello and welcome to PUB or Python Utility Bot\nSelect an option: ")
-    if pubChoose == "guess the number":
-        guessTheNumber()
-    elif pubChoose == "countdown":
+    if pubChoose == "countdown":
         countdown()
     elif pubChoose == "check leap year":
         checkLeapYear()
