@@ -56,9 +56,21 @@ def help():
     os.system(clear_command)
     print(f.renderText('HELP'))
     available = {
-        "Guess The Number",
-        ""
+        "Countdown",
+        "Check leap year",
+        "Password generator"
     }
+    for i in available: print(i)
+    info = """
+PUB Copyright (c) 2021-present micziz
+PUB is free software: \nyou can redistribute it and/or modify under the terms of the BSD 2-Clause "SIMPLEFIED" License.
+PUB is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+More iformation about the license can be found in the COPYING file.
+
+
+    
+    """
+    input("Press enter to continue...")
 
 while True:
     os.system(clear_command)
@@ -70,3 +82,5 @@ while True:
         checkLeapYear()
     elif pubChoose == "password generator":
         passwordGenerator()
+    elif pubChoose == "help":
+        help()
