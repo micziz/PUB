@@ -15,6 +15,8 @@ if sys.platform == 'win32':
 else:
     clear_command = 'clear'
 
+print("Loading...")
+time.sleep(2)
 
 def guessTheNumber():
     os.system(clear_command)
@@ -71,7 +73,7 @@ def checkLeapYear():
 while True:
     os.system(clear_command)
     print(f.renderText('MAIN MENU'))
-    pubChoose = input("Hello and welcome to PUB or Python Utility Bot\nSelect an option:")
+    pubChoose = input("Hello and welcome to PUB or Python Utility Bot\nSelect an option: ")
     if pubChoose == "guess the number":
         guessTheNumber()
     elif pubChoose == "countdown":
