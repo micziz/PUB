@@ -1,4 +1,6 @@
 # Pub!
 
-Small little project that never saw the light of day.
+A series of utilities for you.
+
+## NOT TO BE CONFUSED WITH PUB THE PACKAGE MANAGER FOR DART
 
