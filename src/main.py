@@ -1,13 +1,16 @@
+# Import stadndard libraries
 import time, math, random
+# Import third-party libraries
 from pyfiglet import Figlet
-__copyrigth__ = "© michi 2021-2021"
+
+# Copywrite information
+copyrigth = "© michi 2021-2021"
 
 f = Figlet(font='slant')
 print(f.renderText('PUB'))
 
-print("Hello and welcome to PUB or Python Utility Bot")
-print("Select your utility here:")
-pubChoose = input()
+
+pubChoose = input("Hello and welcome to PUB or Python Utility Bot\nSelect an option:")
 
 if pubChoose == "guess the number":
     print("########################################################################")
