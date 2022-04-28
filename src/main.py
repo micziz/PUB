@@ -1,5 +1,5 @@
 # Import stadndard libraries
-import time, math, random
+import time, math, random, sys, os
 # Import third-party libraries
 from pyfiglet import Figlet
 
@@ -9,8 +9,17 @@ copyrigth = "© michi 2021-2021"
 f = Figlet(font='slant')
 print(f.renderText('PUB'))
 
+if sys.platform == 'win32':
+    clear_command = 'cls'
+else:
+    clear_command = 'clear'
+
 
 pubChoose = input("Hello and welcome to PUB or Python Utility Bot\nSelect an option:")
+
+def guessTheNumber():
+    os.system(clear_command)
+    f.renderText('GUESS THE NUMBER')
 
 if pubChoose == "guess the number":
     print("########################################################################")
